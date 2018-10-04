@@ -1,0 +1,48 @@
+<!DOCTYPE HTML5>
+
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="description" content="javascript Calculator" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href='mystyle.css' type="text/css" rel='stylesheet' />
+	<script src='jquery.js'></script>
+	<script>
+		var x = '';
+		var tmp ='';
+		var tx='';
+	</script>
+	<title>Calculator</title>
+	</head>
+<body>
+	<h1>Basic Calculator</h1>
+	<br />
+	<form id ="myform" Name ="calc" >
+	<input name ="display"  style= "width: 475px; background-color: teal; text-align:center"/> <br />
+	<input type=button value="0" onclick= "calc.display.value+='0'; x +='0'"/>
+	<input type=button value="1" onclick= "calc.display.value+='1'; x +='1'"/>
+	<input type=button value="2" onclick= "calc.display.value+='2'; x +='2'"/>
+	<input type=button value="+" onclick= "calc.display.value+='+'; tmp+=calc.display.value; tx =x; x =0" style= "background-color: #0003fb"/> <br />
+	<input type=button value="3" onclick= "calc.display.value+='3'; x +='3'"/>
+	<input type=button value="4" onclick= "calc.display.value+='4'; x +='4'"/>
+	<input type=button value="5" onclick= "calc.display.value+='5'; x +='5'"/>
+	<input type=button value="-" onclick= "calc.display.value+='-'; tmp+=calc.display.value; tx =x; x =0" style= "background-color: #6600cd"/> <br />
+	<input type=button value="6" onclick= "calc.display.value+='6'; x +='6'" />
+	<input type=button value="7" onclick= "calc.display.value+='7'; x +='7'"/>
+	<input type=button value="8" onclick= "calc.display.value+='8'; x +='8'"/>
+	<input type=button value="×" onclick= "calc.display.value+='*'; tmp+=calc.display.value; tx =x; x =0" style= "background-color: #650031"/> <br />
+	<input type=button value="9" onclick= "calc.display.value+='9'; x +='9'"/>
+        <input type=button value="%" onclick= "calc.display.value=tmp; tx =tx*x/100; if (calc.display.value.includes('*')) calc.display.value =tx;else calc.display.value+=tx; tx =''; x =calc.display.value"/>
+	<input type=button value="√" onclick= "calc.display.value=tmp; calc.display.value+=Math.sqrt(x); x =Math.sqrt(x)"/>
+	<input type=button value="÷" onclick= "calc.display.value+='/'; tmp+=calc.display.value; tx =x; x =0" style= "background-color: #920336"/> <br />
+	<input type=button value="C" onclick= "calc.display.value=''; tmp =''; x =0" style= "background-color: #fe0503"/>
+	<input type=button value="." onclick= "calc.display.value+='.'; x +='.'"/>
+	<input type=button value="x&#178;" onclick= "calc.display.value=tmp; calc.display.value+=x*x; x =x*x"/>
+	<input type=button value="=" onclick= "calc.display.value=eval(calc.display.value); tmp =''; x =calc.display.value" style= "background-color: #673301"/> <br />
+	
+	
+	</form>
+	
+</body>
+
+</html>
